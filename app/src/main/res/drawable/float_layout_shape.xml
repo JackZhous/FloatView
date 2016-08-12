@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~         Copyright (C) 2016-2017 宙斯
+  ~         All rights reserved
+  ~
+  ~        filename :Class4
+  ~        description :
+  ~             透明背景  和边框
+  ~         created by jackzhous at  11/07/2016 12:12:12
+  ~         http://blog.csdn.net/jackzhouyu
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/apha"/>
+    <corners android:radius="60dp" />
+    <stroke android:color="@color/apha" android:width="1dp" />
+</shape>

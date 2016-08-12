@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~         Copyright (C) 2016-2017 宙斯
+  ~         All rights reserved
+  ~
+  ~        filename :Class4
+  ~        description :
+  ~
+  ~         created by jackzhous at  11/07/2016 12:12:12
+  ~         http://blog.csdn.net/jackzhouyu
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/float_layout_shape"
+    android:id="@+id/float_layout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/account_left"
+        android:visibility="gone"
+        android:text="@string/account"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="center"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/float_image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/account_right"
+        android:visibility="gone"
+        android:text="@string/account"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center"
+        android:textSize="18sp"/>
+</LinearLayout>
