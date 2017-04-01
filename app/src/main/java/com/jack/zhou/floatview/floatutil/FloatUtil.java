@@ -11,9 +11,11 @@
 
 package com.jack.zhou.floatview.floatutil;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.PixelFormat;
+import android.os.Build;
 import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
@@ -63,6 +65,7 @@ public class FloatUtil {
         return instance;
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public void createFloatView(Context context){
         if(null != floatImage){
             Log.i(TAG, "float is already created!");
@@ -86,7 +89,7 @@ public class FloatUtil {
         mFloatLayout = (LinearLayout)LayoutInflater.from(context).inflate(R.layout.float_window, null);
         mMansger.addView(mFloatLayout, mParams);
         floatImage = (ImageView)mFloatLayout.findViewById(R.id.float_image);
-        floatImage.setImageDrawable(context.getDrawable(R.drawable.xy_icon));
+        floatImage.setImageResource(R.drawable.xy_icon);
         account_left = (TextView)mFloatLayout.findViewById(R.id.account_left);
         account_right = (TextView)mFloatLayout.findViewById(R.id.account_right);
 
@@ -179,12 +182,15 @@ public class FloatUtil {
             account_left.setVisibility(View.GONE);
             account_right.setVisibility(View.GONE);
             if(float_x > screen_widht / 2){
-                floatImage.setImageDrawable(mContext.getDrawable(R.drawable.xy_icon));                                    //设置右边浮标icon
+
+                //floatImage.setImageDrawable(mContext.getDrawable(R.drawable.xy_icon));                                    //设置右边浮标icon
                 float_x = screen_widht - mFloatLayout.getWidth();
             }else{
-                floatImage.setImageDrawable(mContext.getDrawable(R.drawable.xy_icon));
+                //floatImage.setImageDrawable(mContext.getDrawable(R.drawable.xy_icon));
                 float_x = 0;
             }
+
+            floatImage.setImageResource(R.drawable.xy_icon);
             mParams.x = float_x;
             if(isMove){
                 return;
